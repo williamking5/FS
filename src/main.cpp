@@ -26,7 +26,8 @@ int main(){
 	int lock_status=0;
 	sprintf(cmd,"./qshell account %s %s",AK,SK);
 	system(cmd);
-
+	system("mkdir .tmp 2>tmp.tmp");
+	
 	FILE *fp=fopen("login.conf","r");
 	if (fp!=NULL){
 		fscanf(fp,"%s",username);
