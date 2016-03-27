@@ -1,5 +1,5 @@
 # FS
-轻量级文件传输工具
+轻量级文件传输工具（windows版本已经可以下载了，[链接](https://github.com/williamking5/Download/blob/master/FS%20for%20windows.rar)）
 ### 为什么要制作FS
 原因十分简单，本来打算制作QQFK的，结果协作失败。某人又经常失踪，只好先写一个轻量级的传输工具以应对现在需求。
 ### 协议
