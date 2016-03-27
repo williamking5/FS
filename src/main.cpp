@@ -51,8 +51,8 @@ int main(){
 		}
 		else if (choose==2){
 			while (!sign()){}
-			fp=fopen("login.conf","w");
-			fprintf(fp,"%s\n",username);
+			fp=fopen("login.conf","r");
+			fscanf(fp,"%s\n",username);
 			fclose(fp);
 		}
 		else {
@@ -62,7 +62,10 @@ int main(){
 
 	int bb=1;
 	while (1){
-		if (bb) printf("<%s> ",username);
+		if (bb) {
+			printf("<%s> ->",username);
+			if (lock_status) printf("<%s> ",lockname);
+		}
 		else bb=1;
 		fgets(order,100,stdin);
 		if (strlen(order)==1) continue;

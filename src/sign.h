@@ -50,5 +50,9 @@ int sign(){
 	sprintf(cmd,"./qshell delete %s %s >delete.LOG",BUCKET,tmp);
 	system(cmd);
 	system("rm user.conf");
+
+	fp=fopen("login.conf","w");
+	fprintf(fp,"%s\n",username);
+	fclose(fp);
 	return 1;
 }
