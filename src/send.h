@@ -1,5 +1,5 @@
 int Send(char lockname[],char username[]){
-	char putname[100],filename[100],*pp;
+	char putname[500],filename[500],*pp;
 	printf("请输入文件名： ");
 	scanf("%s",filename);
 	
@@ -30,7 +30,7 @@ int Send(char lockname[],char username[]){
 		pp+=k+1;
 	}
 
-	char cmd[200],nowtime[20];
+	char cmd[500],nowtime[20];
 	gettime(nowtime);
 	sprintf(cmd,"./qshell fput %s %s-%s-%s-%s %s",BUCKET,lockname,nowtime,pp,username,filename);
 	system(cmd);
